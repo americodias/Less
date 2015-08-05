@@ -73,14 +73,14 @@
 						<div class="post-meta">
 							<?php if( comments_open() ) : ?>
 								<span class="comments-link">
-									<?php comments_popup_link( __( 'Comment', 'break' ), __( '1 Comment', 'break' ), __( '% Comments', 'break' ) ); ?>
+									<?php comments_popup_link( __( 'Comment', 'less' ), __( '1 Comment', 'less' ), __( '% Comments', 'less' ) ); ?>
 								</span>
 							<?php endif; ?>
 						
 						</div><!--/post-meta -->
 						
 						<div class="the-content">
-							<?php the_content( 'Continue...' ); ?>
+							<?php the_content( __('Continue...', 'less') ); ?>
 							
 							<?php wp_link_pages(); ?>
 						</div><!-- the-content -->
@@ -104,7 +104,7 @@
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404">Nothing posted yet</h1>
+					<h1 class="404"><?php _e('Nothing posted yet', 'less'); ?></h1>
 				</article>
 
 			<?php endif; ?>
@@ -138,7 +138,7 @@
 						</div><!--/post-meta -->
 						
 						<div class="the-content">
-							<?php the_content( 'Continue...' ); ?>
+							<?php the_content( __('Continue...', 'less') ); ?>
 							
 							<?php wp_link_pages(); ?>
 						</div><!-- the-content -->
@@ -162,7 +162,7 @@
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404">Nothing posted yet</h1>
+					<h1 class="404"><?php _e('Nothing posted yet', 'less'); ?></h1>
 				</article>
 
 			<?php endif; ?>
@@ -199,7 +199,7 @@
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404">Nothing posted yet</h1>
+					<h1 class="404"><?php _e('Nothing posted yet', 'less'); ?></h1>
 				</article>
 
 			<?php endif; ?>
@@ -220,9 +220,9 @@
 <footer class="site-footer" role="contentinfo">
 	<div class="site-info container">
 		<?php do_action( 'break_credits' ); ?>
-		<a href="http://wordpress.org/" title="A Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress</a>
-		<span class="sep"> and </span>
-		<a href="http://lessmade.com/themes/less" rel="theme">LESS</a> by <a href="http://jarederickson.com" rel="designer">Jared Erickson</a>
+		<a href="http://wordpress.org/" title="<?php _e('A Semantic Personal Publishing Platform', 'less'); ?>" rel="generator"><?php _e('Proudly powered by WordPress', 'less'); ?></a>
+		<span class="sep"> <?php _e('and', 'less'); ?> </span>
+		<a href="http://lessmade.com/themes/less" rel="theme">LESS</a> <?php _e('by', 'less'); ?> <a href="http://jarederickson.com" rel="designer">Jared Erickson</a>
 	</div><!-- .site-info -->
 </footer><!-- #colophon .site-footer -->
 

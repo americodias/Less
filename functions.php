@@ -1,7 +1,15 @@
 <?php
 
 // Define the version as a constant so we can easily replace it throughout the theme
-define( 'LESS_VERSION', 1.1 );
+define( 'LESS_VERSION', '1.1.1' );
+
+/*-----------------------------------------------------------------------------------*/
+/* Load language
+/*-----------------------------------------------------------------------------------*/
+add_action('after_setup_theme', 'my_theme_setup');
+function my_theme_setup(){
+    load_theme_textdomain('less', get_template_directory() . '/lang');
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* Add Rss to Head

@@ -1,6 +1,8 @@
 Less
 ====
 
+** Version 1.1.1: Improved i8n and added pt_PT translation. **
+
 A simple minimal WordPress theme built with only what is needed to survive
 
 ![Less screenshot](https://github.com/alliswell/Less/blob/master/dev/less-screenshot.png?raw=true)
