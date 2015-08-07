@@ -28,7 +28,7 @@
 			<?php 
 				// grab admin email and their photo
 				$admin_email = get_option('admin_email');
-				echo get_avatar( $admin_email, 100 ); 
+				echo get_avatar( $admin_email, 100 , '', get_theme_mod('less_gravatar_alt_text') ); 
 			?>
 		</div><!--/ author -->
 		
@@ -65,11 +65,11 @@
 
 					<article class="post">
 					
-						<h1 class="title">
+						<h2 class="title">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<?php the_title() ?>
 							</a>
-						</h1>
+						</h2>
 						<div class="post-meta">
 							<?php if( comments_open() ) : ?>
 								<span class="comments-link">
@@ -104,7 +104,7 @@
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404"><?php _e('Nothing posted yet', 'less'); ?></h1>
+					<h2 class="404"><?php _e('Nothing posted yet', 'less'); ?></h2>
 				</article>
 
 			<?php endif; ?>
@@ -127,7 +127,7 @@
 
 					<article class="post">
 					
-						<h1 class="title"><?php the_title() ?></h1>
+						<h2 class="title"><?php the_title() ?></h2>
 						<div class="post-meta">
 							<?php if( comments_open() ) : ?>
 								<span class="comments-link">
@@ -162,7 +162,7 @@
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404"><?php _e('Nothing posted yet', 'less'); ?></h1>
+					<h2 class="404"><?php _e('Nothing posted yet', 'less'); ?></h2>
 				</article>
 
 			<?php endif; ?>
@@ -184,7 +184,7 @@
 
 					<article class="post">
 					
-						<h1 class="title"><?php the_title() ?></h1>
+						<h2 class="title"><?php the_title() ?></h2>
 						
 						<div class="the-content">
 							<?php the_content(); ?>
@@ -199,7 +199,7 @@
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404"><?php _e('Nothing posted yet', 'less'); ?></h1>
+					<h2 class="404"><?php _e('Nothing posted yet', 'less'); ?></h2>
 				</article>
 
 			<?php endif; ?>

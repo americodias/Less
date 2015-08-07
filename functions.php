@@ -43,3 +43,34 @@ function less_scripts()  {
   
 }
 add_action( 'wp_enqueue_scripts', 'less_scripts' );
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Theme customization
+/*-----------------------------------------------------------------------------------*/
+function less_customizer_general($wp_customize) {
+
+    $wp_customize->add_section('less_general', array(
+        'title'    => __('Less options', 'less'),
+        'description' => '',
+        'priority' => 120,
+    ));
+
+	// Alt text for gravatar
+	$wp_customize->add_setting( 'less_gravatar_alt_text', array(
+		'type'		    => 'theme_mod',
+        'capability'    => 'edit_theme_options',
+		'default'	    => ''
+	) );
+
+	$wp_customize->add_control( 'less_gravatar_alt_text', array(
+		'label'		=> __('Gravatar alt text','less'),
+		'section'	=> 'less_general',
+		'settings'	=> 'less_gravatar_alt_text',
+		'type'		=> 'text',
+		'priority'	=> '1',
+	) );
+		
+}
+
+add_action( 'customize_register', 'less_customizer_general' );

@@ -1,0 +1,9 @@
+<wpml-config>
+    <admin-texts>
+        <key name="theme_mods_Less">
+            <key name="less_gravatar_alt_text">
+            </key>
+        </key>
+        <custom-field action="translate">theme_mods_Less</custom-field>
+    </admin-texts>
+</wpml-config>
